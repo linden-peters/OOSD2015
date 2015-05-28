@@ -48,11 +48,11 @@ if (isset($header_script))
 <nav>
 	<div id="navBar">
 		<ul>
-			<li><a href="index.php" class="button">Home</a></li>
-			<li><a href="packages.php" class="button">Vacations</a></li>
-			<li><a href="register.php" class="button">Bookings</a></li>
-			<li><a href="promos.php" class="button">Promotions</a></li>
-			<li><a href="contact.php" class="button">Contact</a></li>
+			<li><a href="index.php" class="button<?= (basename($_SERVER['PHP_SELF']) == 'index.php' ? " bright" : NULL) ?>">Home</a></li>
+			<li><a href="packages.php" class="button<?= (basename($_SERVER['PHP_SELF']) == 'packages.php' ? " bright" : NULL) ?>">Vacations</a></li>
+			<li><a href="register.php" class="button<?= (basename($_SERVER['PHP_SELF']) == 'register.php' ? " bright" : NULL) ?>">Bookings</a></li>
+			<li><a href="promos.php" class="button<?= (basename($_SERVER['PHP_SELF']) == 'promos.php' ? " bright" : NULL) ?>">Promotions</a></li>
+			<li><a href="contact.php" class="button<?= (basename($_SERVER['PHP_SELF']) == 'contact.php' ? " bright" : NULL) ?>">Contact</a></li>
 		</ul>
 	</div>
 </nav>
