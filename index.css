@@ -118,6 +118,10 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     background: #FFB84D;
 }
 
+input[type=date] {
+  line-height: 24px;
+}
+
 #sliderText{
 font-weight: bold;
 color:#FFC266 ;
