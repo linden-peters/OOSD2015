@@ -123,8 +123,9 @@ function formatPhone($phone)   //function to format the phone/fax number
 <body>
 <main> 
 	<div class="imgfeildset">
-	    <p font size="2" align="right">* Click the addresses below to get the list of agents</p>
-		<h3>Agencies Contact Information:</h3><br/>
+	    
+		<h3>Agencies Contact Information</h3><br />(Click the addresses below to show list of agents)<br /><br />
+		<!--<p font size="2">* Click the addresses below to get the list of agents</p> -->
 		<?php
 			$query = "select * from Agencies";
 			$result = mysqli_query($con, $query) or die (" SQL query error");
