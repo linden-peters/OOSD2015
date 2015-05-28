@@ -115,20 +115,20 @@ else
 print("<article>
 <form id='regForm' name='register' method='post' action='{$_SERVER['PHP_SELF']}' onReset='clearWarn();'>
 <table>
-<tr><th colspan=2'>Customer Information</th><th class='formicon'></th><th class='formicon'></th><th colspan=2'>Customer Information</th><th class='formicon'></th><th class='formicon'></th></tr>
+<tr><th colspan='8'>Customer Information</th></tr>
 <tr><td><label for='custfirstname'>First Name:</label></td>
 	<td><input type='text' name='custfirstname' onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
-	<td id='fi-custfirstname'><img class='formicon' src='img/icon_info.png' title='Customers First Name'></td>
-	<td id='fb-custfirstname'></td>
+	<td id='fi-custfirstname' class='formicon'><img class='formicon' src='img/icon_info.png' title='Customers First Name'></td>
+	<td id='fb-custfirstname' class='formicon'></td>
 	<td><label for='custlastname'>Last Name:</label></td>
 	<td><input type='text' name='custlastname' onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
-	<td id='fi-custlastname'><img class='formicon' src='img/icon_info.png' title='Customers Last Name'></td>
-	<td id='fb-custlastname'></td></tr>
+	<td id='fi-custlastname' class='formicon'><img class='formicon' src='img/icon_info.png' title='Customers Last Name'></td>
+	<td id='fb-custlastname' class='formicon'></td></tr>
 <tr><td><label for='custaddress'>Address:</label></td>
 	<td><input type='text' name='custaddress' onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
 	<td id='fi-custaddress'><img class='formicon' src='img/icon_info.png' title='Customers Address'></td>
-	<td id='fb-custaddress'></td></tr>
-<tr><td><label for='custcity'>City:</label></td>
+	<td id='fb-custaddress'></td>
+	<td><label for='custcity'>City:</label></td>
 	<td><input type='text' name='custcity' onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
 	<td id='fi-custcity'><img class='formicon' src='img/icon_info.png' title='Customers Home City'></td>
 	<td id='fb-custcity'></td></tr>
@@ -150,8 +150,8 @@ print("<article>
 	<option value='YT'>Yukon</option>
 	</select></td>
 	<td id='fi-custprov'><img class='formicon' src='img/icon_info.png' title='Customers Home Province'></td>
-	<td id='fb-custprov'></td></tr>
-<tr><td><label for='custcountry'>Country:</label></td>
+	<td id='fb-custprov'></td>
+	<td><label for='custcountry'>Country:</label></td>
 	<td><select name='custcountry' onFocus='showHint(this.name);' onBlur='hideHint(this.name);'>
 	<option value=''>---- Select Country ----</option>
 	<option value='CA'>Canada</option>
@@ -165,22 +165,22 @@ print("<article>
 	onChange='this.value = this.value.toUpperCase();'
 	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
 	<td id='fi-custpostal'><img class='formicon' src='img/icon_info.png' title='Customers Postal Code'></td>
-	<td id='fb-custpostal'></td></tr>
-<tr><td><label for='custhomephone'>Home Phone:</label></td>
-	<td><input type='text' name='custhomephone' 
-	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
-	<td id='fi-custhomephone'><img class='formicon' src='img/icon_info.png' title='Customers Home Phone'></td>
-	<td id='fb-custhomephone'></td></tr>
-<tr><td><label for='custbusphone'>Work Phone:</label></td>
-	<td><input type='text' name='custbusphone' 
-	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
-	<td id='fi-custbusphone'><img class='formicon' src='img/icon_info.png' title='Customers Work Phone'></td>
-	<td id='fb-custbusphone'></td></tr>
-<tr><td><label for='custemail'>E-mail Address:</label></td>
+	<td id='fb-custpostal'></td>
+	<td><label for='custemail'>E-mail Address:</label></td>
 	<td><input type='text' name='custemail' 
 	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
 	<td id='fi-custemail'><img class='formicon' src='img/icon_info.png' title='Customers E-mail Address'></td>
 	<td id='fb-custemail'></td></tr>
+<tr><td><label for='custhomephone'>Home Phone:</label></td>
+	<td><input type='tel' name='custhomephone' placeholder='###-###-####' 
+	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
+	<td id='fi-custhomephone'><img class='formicon' src='img/icon_info.png' title='Customers Home Phone'></td>
+	<td id='fb-custhomephone'></td>
+	<td><label for='custbusphone'>Work Phone:</label></td>
+	<td><input type='tel' name='custbusphone' placeholder='###-###-####'
+	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
+	<td id='fi-custbusphone'><img class='formicon' src='img/icon_info.png' title='Customers Work Phone'></td>
+	<td id='fb-custbusphone'></td></tr>
 <tr><th colspan=2'>Package Information</th><th></th><th></th></tr>
 <tr><td><label for='destination'>Destination:</label></td>
 	<td><select name='destination' onFocus='showHint(this.name);' onBlur='hideHint(this.name);' onChange='viewCost(this.value);'>");
@@ -192,7 +192,7 @@ print ("</select></td>
 	<td id='fi-destination'><img class='formicon' src='img/icon_info.png' title='Travel Destination'></td>
 	<td id='fb-destination'></td></tr>
 <tr><td><label for='travelercount'>Group Size:</label></td>
-	<td><input type='text' name='travelercount' 
+	<td><input type='number' name='travelercount' min='1' max='128'
 	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
 	<td id='fi-travelercount'><img class='formicon' src='img/icon_info.png' title='Number of Travelers'></td>
 	<td id='fb-travelercount'></td></tr>
@@ -223,7 +223,7 @@ print ("</select></td>
 	<td id='fb-ccname'></td>
 	</tr>
 <tr><td><label for='ccnumber'>Card Number:</label></td>
-	<td><input type='text' name='ccnumber' 
+	<td><input type='text' name='ccnumber' placeholder='#### #### #### ####'
 	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
 	<td id='fi-ccnumber'><img class='formicon' src='img/icon_info.png' title='Credit Card Number'></td>
 	<td id='fb-ccnumber'></td></tr>
