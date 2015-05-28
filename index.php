@@ -16,8 +16,8 @@ include "header.php";
 		<img src="img/beach.jpg" /><br / >
 			<form id="list" method="get" action="">
 
-				<label for="location">Where would you like to go?</label>
-				<select onchange="top.location.href = 'packages.php?packageId='+ this.options[ this.selectedIndex ].value" >
+				<label for="location">Where would you like to go?</label><br />
+				<select onchange="top.location.href = 'packages.php?packageName='+ this.options[ this.selectedIndex ].value" >
 
 				<option value="" disabled selected>Choose by Package Name</option>
 				
@@ -51,7 +51,7 @@ include "header.php";
 
 				<label for="date">When would you like to travel?</label><br />
 			
-				<input id="dateStart" type="date" placeholder="Date Range: Start"></input>
+				<input id="dateStart" type="date" placeholder="Date Range: Start" value="<?php echo date('Y-m-d'); ?>"></input>
 				<input id="dateEnd" type="date" placeholder="Date Range: End"></input>
 				<button type="button"
 				onclick="top.location.href = 'packages.php?dateStart='+document.getElementById('dateStart').value+
@@ -68,15 +68,15 @@ include "header.php";
 				</form>
 
 				<label for="budget">What is your maximum budget?</label>
-				<p id="sliderText">$0
+				<p id="sliderText">$1000
 				<input id="budget" style="display: inline; width:40%; margin-left:5%; margin-right:5%;" type="range" 
-				step="1000" name="budget" min="0" max="5000" list="steplist" value="3000" 
+				step="500" name="budget" min="1000" max="6000" list="steplist" value="3500" 
 				onchange="document.getElementById('budgetValue').innerHTML = this.value;">
 				
-				</input>$5000</p>
+				</input>$6000</p>
 
-				<button id="budgetValue" value="3000"
-				onclick="top.location.href = 'packages.php?budget='+document.getElementById('budgetValue').innerHTML">3000</button>
+				<button id="budgetValue" value="3500"
+				onclick="top.location.href = 'packages.php?budget='+document.getElementById('budgetValue').innerHTML">3500</button>
 	</section>
 	</div>
 		<!-- Wrapper for the carousel-->
@@ -90,7 +90,6 @@ include "header.php";
 			    <li data-target="#myCarousel" data-slide-to="1"></li>
 			    <li data-target="#myCarousel" data-slide-to="2"></li>
 			    <li data-target="#myCarousel" data-slide-to="3"></li>
-			    <li data-target="#myCarousel" data-slide-to="4"></li>
 			  </ol>
 
 			  <!-- Wrapper for slides -->
