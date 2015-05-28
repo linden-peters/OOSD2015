@@ -10,10 +10,10 @@
 	// Move this to variables.php or db
 	$packageText = array(
 		"Travel Experts" => "Welcome to Travel Experts",
-		"Caribbean" => "Start off the New Year on a relaxed and cheerful note on the warm, sandy shores of the Caribbean.",
+		"Caribbean" => "Start off the New Year on a relaxed note on the warm, sandy shores of the Caribbean.",
 		"Polynesian" => "In Hawaii, your vacation can be whatever you want it to be, from relaxed to adventurous.",
-		"Asian" => "Travel to Asia and experience a rich tapestry of fascinating cultures, exotic landscapes, and age-old traditions.",
-		"European" => "Experience a variety of cultures and famous sites as you see what this charming Old World continent has to offer."
+		"Asian" => "Travel to Asia and experience a rich tapestry of fascinating cultures and exotic landscapes.",
+		"European" => "Experience the variety of cultures and famous sites this charming Old World continent has to offer."
 	);
 	
 	$packageImage = array(
@@ -82,9 +82,19 @@
 		
 		$result = mysqli_query($dbh, $sql) or die("Error: " . mysqli_error($dbh)); 
 		
+		// If no results found, no packages met the search
+		if (mysqli_num_rows($result)==0) 
+		{ 
+			print("	
+				<h2>Sorry! No Vacation Packages found.<br/><br/>Please search again.</h2>
+				<p><a href='index.php'><br/><button>Search Again</button></a><br/><br/></p>
+			");
+		}
+
 		// Get result w assoc key
 		while($row = mysqli_fetch_assoc($result)) 
-		{ 
+		{
+
 			// Get first word in string
 			$myPkgName = strtok($row["PkgName"], " ");
 			
@@ -130,7 +140,9 @@
 					<td>
 						<h2 align='left'>" . $row["PkgName"] . " $" . number_format($totalPrice, 0) . "</h2>
 						<dl>
-							<dt><dd><div class='pack-date-start" . $row["PackageId"] . "'>This Vacation Package is currently unavailable</div></dd></dt>
+							<dt><dd>
+							<div class='pack-date-start" . $row["PackageId"] . "'>Currently unavailable.<br/>Check back soon!</div>
+							</dd></dt>
 							<dd><a href='index.php'><br/><button>Search Again</button></a><br/><br/></dd>
 					<br/><br/></td>
 					</tr>
