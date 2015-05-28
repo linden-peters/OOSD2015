@@ -114,25 +114,50 @@ else
 */
 print("<article>
 <form id='regForm' name='register' method='post' action='{$_SERVER['PHP_SELF']}' onReset='clearWarn();'>
+<section>
 <table>
-<tr><th colspan='8'>Customer Information</th></tr>
-<tr><td><label for='custfirstname'>First Name:</label></td>
+<tr><th class='thlabel' colspan='2'>Customer Information</th>
+	<th class='thspace'><img class='formicon formhide' src='img/icon_info.png' title='Invisible Placeholder'></th>
+	<th class='thspace'><img class='formicon formhide' src='img/icon_info.png' title='Invisible Placeholder'></th></tr>
+<tr><td class='tdlabel'><label for='custfirstname'>First Name:</label></td>
 	<td><input type='text' name='custfirstname' onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
-	<td id='fi-custfirstname' class='formicon'><img class='formicon' src='img/icon_info.png' title='Customers First Name'></td>
-	<td id='fb-custfirstname' class='formicon'></td>
-	<td><label for='custlastname'>Last Name:</label></td>
+	<td id='fi-custfirstname'><img class='formicon' src='img/icon_info.png' title='Customers First Name'></td>
+	<td id='fb-custfirstname'></td></tr>
+<tr><td class='tdlabel'><label for='custlastname'>Last Name:</label></td>
 	<td><input type='text' name='custlastname' onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
-	<td id='fi-custlastname' class='formicon'><img class='formicon' src='img/icon_info.png' title='Customers Last Name'></td>
-	<td id='fb-custlastname' class='formicon'></td></tr>
-<tr><td><label for='custaddress'>Address:</label></td>
+	<td id='fi-custlastname'><img class='formicon' src='img/icon_info.png' title='Customers Last Name'></td>
+	<td id='fb-custlastname'></td></tr>
+<tr><td class='tdlabel'><label for='custhomephone'>Home Phone:</label></td>
+	<td><input type='tel' name='custhomephone' placeholder='###-###-####' 
+	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
+	<td id='fi-custhomephone'><img class='formicon' src='img/icon_info.png' title='Customers Home Phone'></td>
+	<td id='fb-custhomephone'></td></tr>
+<tr><td class='tdlabel'><label for='custbusphone'>Work Phone:</label></td>
+	<td><input type='tel' name='custbusphone' placeholder='###-###-####'
+	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
+	<td id='fi-custbusphone'><img class='formicon' src='img/icon_info.png' title='Customers Work Phone'></td>
+	<td id='fb-custbusphone'></td></tr>
+<tr><td class='tdlabel'><label for='custemail'>E-mail Address:</label></td>
+	<td><input type='email' name='custemail' 
+	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
+	<td id='fi-custemail'><img class='formicon' src='img/icon_info.png' title='Customers E-mail Address'></td>
+	<td id='fb-custemail'></td></tr>
+</table>
+</section>
+<section>
+<table>
+<tr><th class='thlabel' colspan='2'>Address Information</th>
+	<th class='thspace'><img class='formicon formhide' src='img/icon_info.png' title='Invisible Placeholder'></th>
+	<th class='thspace'><img class='formicon formhide' src='img/icon_info.png' title='Invisible Placeholder'></th></tr>
+<tr><td class='tdlabel'><label for='custaddress'>Address:</label></td>
 	<td><input type='text' name='custaddress' onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
 	<td id='fi-custaddress'><img class='formicon' src='img/icon_info.png' title='Customers Address'></td>
-	<td id='fb-custaddress'></td>
-	<td><label for='custcity'>City:</label></td>
+	<td id='fb-custaddress'></td></tr>
+<tr><td class='tdlabel'><label for='custcity'>City:</label></td>
 	<td><input type='text' name='custcity' onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
 	<td id='fi-custcity'><img class='formicon' src='img/icon_info.png' title='Customers Home City'></td>
 	<td id='fb-custcity'></td></tr>
-<tr><td><label for='custprov'>Province:</label></td>
+<tr><td class='tdlabel'><label for='custprov'>Province:</label></td>
 	<td><select name='custprov' onFocus='showHint(this.name);' onBlur='hideHint(this.name);'>
 	<option value=''>---- Select Province ----</option>
 	<option value='AB'>Alberta</option>
@@ -150,8 +175,8 @@ print("<article>
 	<option value='YT'>Yukon</option>
 	</select></td>
 	<td id='fi-custprov'><img class='formicon' src='img/icon_info.png' title='Customers Home Province'></td>
-	<td id='fb-custprov'></td>
-	<td><label for='custcountry'>Country:</label></td>
+	<td id='fb-custprov'></td></tr>
+<tr><td class='tdlabel'><label for='custcountry'>Country:</label></td>
 	<td><select name='custcountry' onFocus='showHint(this.name);' onBlur='hideHint(this.name);'>
 	<option value=''>---- Select Country ----</option>
 	<option value='CA'>Canada</option>
@@ -159,30 +184,21 @@ print("<article>
 	</select></td>
 	<td id='fi-custcountry'><img class='formicon' src='img/icon_info.png' title='Customers Home Country'></td>
 	<td id='fb-custcountry'></td></tr>
-<tr><td><label for='custpostal'>Postal Code:</label></td>
+<tr><td class='tdlabel'><label for='custpostal'>Postal Code:</label></td>
 	<td><input type='text' name='custpostal' 
 	maxlength='7'
 	onChange='this.value = this.value.toUpperCase();'
 	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
 	<td id='fi-custpostal'><img class='formicon' src='img/icon_info.png' title='Customers Postal Code'></td>
-	<td id='fb-custpostal'></td>
-	<td><label for='custemail'>E-mail Address:</label></td>
-	<td><input type='text' name='custemail' 
-	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
-	<td id='fi-custemail'><img class='formicon' src='img/icon_info.png' title='Customers E-mail Address'></td>
-	<td id='fb-custemail'></td></tr>
-<tr><td><label for='custhomephone'>Home Phone:</label></td>
-	<td><input type='tel' name='custhomephone' placeholder='###-###-####' 
-	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
-	<td id='fi-custhomephone'><img class='formicon' src='img/icon_info.png' title='Customers Home Phone'></td>
-	<td id='fb-custhomephone'></td>
-	<td><label for='custbusphone'>Work Phone:</label></td>
-	<td><input type='tel' name='custbusphone' placeholder='###-###-####'
-	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
-	<td id='fi-custbusphone'><img class='formicon' src='img/icon_info.png' title='Customers Work Phone'></td>
-	<td id='fb-custbusphone'></td></tr>
-<tr><th colspan=2'>Package Information</th><th></th><th></th></tr>
-<tr><td><label for='destination'>Destination:</label></td>
+	<td id='fb-custpostal'></td></tr>
+</table>
+</section>
+<section>
+<table>
+<tr><th class='thlabel' colspan='2'>Package Information</th>
+	<th class='thspace'><img class='formicon formhide' src='img/icon_info.png' title='Invisible Placeholder'></th>
+	<th class='thspace'><img class='formicon formhide' src='img/icon_info.png' title='Invisible Placeholder'></th></tr>
+<tr><td class='tdlabel'><label for='destination'>Destination:</label></td>
 	<td><select name='destination' onFocus='showHint(this.name);' onBlur='hideHint(this.name);' onChange='viewCost(this.value);'>");
 	foreach ($packList as $key=>$val)
 	{
@@ -191,12 +207,12 @@ print("<article>
 print ("</select></td>
 	<td id='fi-destination'><img class='formicon' src='img/icon_info.png' title='Travel Destination'></td>
 	<td id='fb-destination'></td></tr>
-<tr><td><label for='travelercount'>Group Size:</label></td>
+<tr><td class='tdlabel'><label for='travelercount'>Group Size:</label></td>
 	<td><input type='number' name='travelercount' min='1' max='128'
 	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
 	<td id='fi-travelercount'><img class='formicon' src='img/icon_info.png' title='Number of Travelers'></td>
 	<td id='fb-travelercount'></td></tr>
-<tr><td><label for='triptype'>Trip Type:</label></td>
+<tr><td class='tdlabel'><label for='triptype'>Trip Type:</label></td>
 	<td><select name='triptype' onFocus='showHint(this.name);' onBlur='hideHint(this.name);'>");
 	foreach ($typeList as $key=>$val)
 	{
@@ -205,11 +221,17 @@ print ("</select></td>
 print ("</select></td>
 	<td id='fi-triptype'><img class='formicon' src='img/icon_info.png' title='Type of Trip'></td>
 	<td id='fb-triptype'></td></tr>
-<tr><td>Price:</td>
+<tr><td class='tdlabel'>Price:</td>
 	<td><span id='formCost'>" . $costList[(isset($_GET['packageID']) ? preg_replace('/[^0-9]/','',$_GET['packageID']) : 0)] . "</span></td>
 	<td></td><td></td></tr>
-<tr><th colspan=2'>Payment Information</th><th></th><th></th></tr>
-<tr><td><label for='ccname'>Method of Payment:</label></td>
+</table>
+</section>
+<section>
+<table>
+<tr><th class='thlabel' colspan='2'>Payment Information</th>
+	<th class='thspace'><img class='formicon formhide' src='img/icon_info.png' title='Invisible Placeholder'></th>
+	<th class='thspace'><img class='formicon formhide' src='img/icon_info.png' title='Invisible Placeholder'></th></tr>
+<tr><td class='tdlabel'><label for='ccname'>Card Type:</label></td>
 	<td>
 	<input type='radio' name='ccname' value='AMEX' onFocus='showHint(this.name);' onBlur='hideHint(this.name);'><img src='img/card_amex.png' alt='American Express' /></input>
 	&nbsp;
@@ -222,19 +244,25 @@ print ("</select></td>
 	<td id='fi-ccname'><img class='formicon' src='img/icon_info.png' title='Credit Card Provider'></td>
 	<td id='fb-ccname'></td>
 	</tr>
-<tr><td><label for='ccnumber'>Card Number:</label></td>
+<tr><td class='tdlabel'><label for='ccnumber'>Card Number:</label></td>
 	<td><input type='text' name='ccnumber' placeholder='#### #### #### ####'
 	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
 	<td id='fi-ccnumber'><img class='formicon' src='img/icon_info.png' title='Credit Card Number'></td>
 	<td id='fb-ccnumber'></td></tr>
-<tr><td><label for='ccexpiry'>Expiration:</label></td>
+<tr><td class='tdlabel'><label for='ccexpiry'>Expiration:</label></td>
 	<td><input type='month' name='ccexpiry' 
 	onFocus='showHint(this.name);' onBlur='hideHint(this.name);' /></td>
 	<td id='fi-ccexpiry'><img class='formicon' src='img/icon_info.png' title='Credit Card Expiration'></td>
 	<td id='fb-ccexpiry'></td></tr>
-<tr><td></td><td align='center'><input type='reset' name='rsbutton' value='Reset Form' onClick='return confirm(\"Are you sure you want to reset form?\");' /></td><td></td><td></td>
-	<td></td><td align='center'><input type='submit' name='gobutton' value='Submit Form' onClick='return checkForm();' /></td><td></td><td></td></tr>
 </table>
+</section>
+<section id='checkout'>
+<table>
+<tr><th class='thlabel'>Action</th></tr>
+<tr><td align='center'><input type='submit' name='gobutton' value='Submit' onClick='return checkForm();' /></tr>
+<tr><td align='center'><input type='reset' name='rsbutton' value='Reset' onClick='return confirm(\"Are you sure you want to reset form?\");' /></td></tr>
+</table>
+</section>
 </form>
 </article>");
 }

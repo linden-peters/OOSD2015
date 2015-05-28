@@ -2,12 +2,20 @@
  * Date: 2015/05/12
  * Usage: Included by register.php.
  */
-main {color:#FFFFFF;overflow-y:auto;}
-input[type="text"],input[type="month"],input[type="number"],input[type="tel"],input[type="submit"],input[type="reset"],select {background-color:#7F9FBF;font-family:"Courier New",Courier,monospace;}
-input[type="text"],input[type="month"],input[type="number"],input[type="tel"],select {width:17em;}
-input[type="submit"],input[type="reset"] {width:12em;}
+main {color:#FFFFFF;padding-top:2em;padding-left:1em;overflow-y:auto;}
+section {position:relative;float:left;margin:0;height:14em;width:34em;/*border:1px dotted #007f00;*/}
+#checkout {width:7em;}
+input[type="text"],input[type="month"],input[type="number"],input[type="email"],input[type="tel"],input[type="submit"],input[type="reset"],select {background-color:#7F9FBF;font-family:"Courier New",Courier,monospace;}
+input[type="text"],input[type="month"],input[type="number"],input[type="email"],input[type="tel"],select {width:18em;}
+input[type="submit"],input[type="reset"] {width:6em;}
 input::-webkit-input-placeholder {color: #FFFFFF;}
 //label {color:#7F9FBF;}
-th {color:#7F9FBF;text-align:center;font-size:200%;}
+table {border:0;/*border:1px dotted #007f00;*/}
+th {color:#FFCC66;text-align:center;font-size:200%;text-shadow: 0em 0.125em 0.1875em #472B00;}
+.tdlabel {width:9em;text-align:right;white-space:nowrap;}
+.tdfield {width:18em;text-align:left;}
+.thlabel {height:2em;}
+.thspace {width:1.5em;}
 .formicon {height:1.5em;width:1.5em;}
+.formhide {visibility:hidden;}
 //.formHint {position:absolute;top:8em;left:10em;visibility:hidden;}
