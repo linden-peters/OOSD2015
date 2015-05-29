@@ -5,8 +5,8 @@
 $header_title = "Welcome to Travel Experts";
 $header_style = ["index.css"];
 $header_script = [
-	"https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",		/* jQuery library */
-	"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"];		/* Latest compiled JavaScript */
+	"https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",	/* jQuery library */
+	"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"];	/* Latest compiled JavaScript */
 include "header.php";
 ?>
 <div id="pageContainer">
@@ -17,7 +17,8 @@ include "header.php";
 			<form id="list" method="get" action="">
 
 				<label for="location">Where would you like to go?</label><br />
-				<select onchange="top.location.href = 'packages.php?packageName='+ this.options[ this.selectedIndex ].value" >
+				<select onchange="top.location.href = 'packages.php?packageName='+ 
+				this.options[ this.selectedIndex ].value" >
 
 				<option value="" disabled selected>Choose by Package Name</option>
 				
@@ -51,14 +52,17 @@ include "header.php";
 
 				<label for="date">When would you like to travel?</label><br />
 			
-				<input id="dateStart" type="date" placeholder="Date Range: Start" value="<?php echo date('Y-m-d'); ?>"></input>
+				<input id="dateStart" type="date" placeholder="Date Range: Start" 
+				value="<?php echo date('Y-m-d'); ?>"></input>
 				<input id="dateEnd" type="date" placeholder="Date Range: End"></input>
 				<button type="button"
-				onclick="top.location.href = 'packages.php?dateStart='+document.getElementById('dateStart').value+
+				onclick="top.location.href = 'packages.php?dateStart='+
+				document.getElementById('dateStart').value+
 				'&dateEnd='+document.getElementById('dateEnd').value">Go!</button><br />
 
 				<label for="vacationType">What type of vacation would you prefer?</label><br />
-				<select onchange="top.location.href = 'packages.php?type='+ this.options[ this.selectedIndex ].value" >
+				<select onchange="top.location.href = 'packages.php?type='+ 
+				this.options[ this.selectedIndex ].value" >
 				<option value="" disabled selected>Choose by Vacation Type</option>
 				<option value="Cruise">Cruise</option>
 				<option value="Inclusive">All inclusive resort</option>
@@ -69,14 +73,16 @@ include "header.php";
 
 				<label for="budget">What is your maximum budget?</label>
 				<p id="sliderText">$1000
-				<input id="budget" style="display: inline; width:40%; margin-left:5%; margin-right:5%;" type="range" 
+				<input id="budget" style="display: inline; width:40%; 
+				margin-left:5%; margin-right:5%;" type="range" 
 				step="500" name="budget" min="1000" max="6000" list="steplist" value="3500" 
 				onchange="document.getElementById('budgetValue').innerHTML = this.value;">
 				
 				</input>$6000</p>
 
 				<button id="budgetValue" value="3500"
-				onclick="top.location.href = 'packages.php?budget='+document.getElementById('budgetValue').innerHTML">3500</button>
+				onclick="top.location.href = 'packages.php?budget='+
+				document.getElementById('budgetValue').innerHTML">3500</button>
 	</section>
 	</div>
 		<!-- Wrapper for the carousel-->
@@ -119,7 +125,7 @@ include "header.php";
 			      <div class="carousel-caption">
 			        <h3>Bring Your Friends</h3>
 		             <p>The More The Merrier</p><br />
-		             <a class="carButton" href="register.php" role="button">Register With Us</a>
+		             <a class="carButton" href="promos.php" role="button">See the Offer</a>
 			      </div>
 			    </div>
 
