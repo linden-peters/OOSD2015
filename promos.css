@@ -26,21 +26,30 @@ ul{
 list-style-position: inside;
 }
 
- .promoImage > img{
- border-radius:0.94em;
+.promoImage { 
+    width: 35%; 
+    height: 350px; 
+    overflow: hidden; 
+    display:inline-block;
+    border-radius: 0.9375em;
+}
+
+.promoImage img { 
+    width: 100%;
 }
 
 #promoNav {
 margin-bottom:1%;
+margin-top: 1%;
 font-size: 1.1em;
 }
 
-#promoNav > a{
+a{
 	text-decoration: none;
 	color: #00BFFF;
 }
 
-#promoNav > a:hover {
+a:hover{
 	text-decoration: none;
 	color: #00DFFF;
 }
