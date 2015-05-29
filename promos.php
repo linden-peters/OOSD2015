@@ -12,7 +12,12 @@ include "header.php";
 	<main>
 		<article>
 		<h1> Travel Experts Promotions - Don't Miss a GREAT Deal</h1>
-
+		
+			<div id="promoNav"><a href="#promo1">Summer 15% SALE</a> | 
+			<a href="#promo2">Destination Weddings</a> | 
+			<a href="#promo3">Group Travel</a> | 
+			<a href="#promo4">Hotel Promotions</a></div>
+			
 			<section id="promo1">
 				<h3>Book Your Next Vacation Now</h3>
 				<div class="promoImage"><img src="img/promo1.jpg" alt="promo1"></div>
