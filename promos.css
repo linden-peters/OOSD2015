@@ -10,7 +10,7 @@ font-family: Arial, helvetica, sans-serif;
 text-align: center;
 color: white;
 }
-}
+
 
 h1, h3{
 font-style: normal;
@@ -28,4 +28,19 @@ list-style-position: inside;
 
  .promoImage > img{
  border-radius:0.94em;
+}
+
+#promoNav {
+margin-bottom:1%;
+font-size: 1.1em;
+}
+
+#promoNav > a{
+	text-decoration: none;
+	color: #00BFFF;
+}
+
+#promoNav > a:hover {
+	text-decoration: none;
+	color: #00DFFF;
 }
