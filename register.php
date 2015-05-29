@@ -72,7 +72,7 @@ else
 {
 	$packList = Array('------ Go To ------');
 	$costList = Array('N/A');
-	$typeList = Array('TripType');
+	$typeList = Array('---- Trip Type ----');
 	// Populate $packList and $costList from DB.
 	$sql = 'SELECT `PackageId`, `PkgName`, (`PkgBasePrice`+`PkgAgencyCommission`) AS `PkgPrice` FROM `packages`;';
 	$result = mysqli_query($con, $sql) or die('Query Failed: ' . mysqli_error($con));
