@@ -1138,3 +1138,4 @@ UPDATE `travelexperts`.`agencies` SET `AgncyMap` = 'https://www.google.com/maps/
 UPDATE `travelexperts`.`agencies` SET `AgncyMap` = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20206.32347690691!2d-113.9651157!3d50.72382695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53719832dbd76fe5%3A0x583906fa0929b961!2sOkotoks%2C+AB!5e0!3m2!1sen!2sca!4v1432838366577' WHERE `agencies`.`AgencyId` = 2;
 UPDATE `travelexperts`.`packages` SET `PkgStartDate` = DATE_ADD(`PkgStartDate`, INTERVAL 9.6 YEAR_MONTH), `PkgEndDate` = DATE_ADD(`PkgEndDate`, INTERVAL 9.6 YEAR_MONTH) WHERE 1;
 UPDATE `travelexperts`.`packages` SET `PkgStartDate` = DATE_SUB(`PkgStartDate`, INTERVAL 1 MONTH) WHERE `PackageId` = 2;
+UPDATE `travelexperts`.`packages` SET `PkgStartDate` = DATE_ADD(`PkgStartDate`, INTERVAL 6 MONTH), `PkgEndDate` = DATE_ADD(`PkgEndDate`, INTERVAL 6 MONTH) WHERE `PackageId` = 1;
